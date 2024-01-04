@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Document</title>
+  <style>
+.input{
+  margin-left: 20px;
+  background-color: antiquewhite;
+}
+    #div1{
+      position: fixed;
+      top: 70px;
+      left: 20px;
+      background-color: antiquewhite;
+    }
+    #div2{
+     position: relative;
+      top: 40px;
+      left:10px;
+     }
+    #div4{
+         position: relative;
+         top: 70px;
+         left:10px;
+        }
+    #div5{
+        position: relative;
+        top: 90px;
+        left:10px;
+        }
+    #div3{
+        position: relative;
+        top: 110px;
+        left:10px;
+       }
+</style>
+</head>
+<body>
+    <form name="form" action="html-links.html" method="post">
+<centre>
+<h1>Employee Details</h1>
+<div id="div1">
+    <label for="id"> Employee Id</label>
+        <input type="number" class="input" name="id" id="id" required placeholder="enter id"/></div>
+<div id="div2">
+    <label for="name" >Employee name</label>
+        <input type="text" pattern="[a-zA-Z ]+" name="name" id="name"/></div> 
+<div id="div4"> 
+    <label for="gender"> Employee gender</label>
+            <input type="radio" name="gender" id="g_male" value="MALE"/>MALE
+            <input type="radio" name="gender" id="g_female" value="FEMALE"/>FEMALE</div>
+<div id="div5">
+    <label for="email">Employee email</label>
+            <input type="email" name="email" id="email"/></div>
+<div id="div3">         
+            <button type="submit" >ENTER</button> <button type="reset">RESET</button></td></div>   
+  </centre>
+  </form>
+</body>
+</html>

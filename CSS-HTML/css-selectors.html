@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    /*element selector */
+    <style>
+        p{background-color: darkslategrey;}
+    
+     /*class selector */
+            .paragraph{
+                min-height: 50px;
+            }
+            .para{
+                    color: blueviolet;
+            }
+     /*id selector */
+        #p1{
+            text-align: center;
+        }
+     /*universal selector */
+     *{
+         font-family:'Segoe UI',Tahoma, Geneva, Vedana,sans-serif;
+     }
+     /*pseudo selector */
+
+     p:hover{
+         min-height:100px;
+         background-color: red;
+     }
+     /*Attribute selector */
+     p[class="paragraph"]{
+         color:cornflowerblue;
+     }
+     </style>
+</head>
+<body>
+    <h2 id="heading1" class="heading">A heading</h2>
+    <p id="p1" class="paragraph">A paragraph</p>
+    <div id="d1" class="div">a div</div>
+            <p id="p2" class="para">Paragraph inside the div</p>
+    <div id="d1" class="div">Another div</div>
+    <button id="d1" class="div">Click me</button>
+</body>
+</html>

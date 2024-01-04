@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Document</title>
+</head>
+<body>
+   <h1>Login:</h1>
+   name
+   No of repositories 
+</body>
+<script>
+async function fetchUser(username){
+    let response=await fetch('https://api.github.com/users/'+username);
+    if(response.status===200)
+    {
+        let data=await response.json()
+        console.log(data)
+    }
+    else{
+        return{status:response.status,error:response.statusText}
+    }
+}
+    //response.then(()=>console.log(response.status))
+
+fetchUser('ram1uj').then(response=>console.log(response))
+                        .catch(error=>console.error(error))
+                        <!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        span{
+            color: darkblue;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <input type="text" id="username" placeholder="Enter your GitHub Username">
+        <button onclick="searchUser()">Search</button>
+    </div>
+    <div>
+        <p>Login : <span id="login"></span></p>
+        <p>Name : <span id="name"></span></p>
+        <p>Total Repos : <span id="repos"></span></p>
+        <img id="avatar" height="200px" width="200px" alt="Loading Image">
+    </div>
+</body>
+<script>
+    const searchUser = ()=>{
+        let username = document.getElementById('username').value;
+        fetchUser(username).then(
+            user => {
+                document.getElementById("login").innerHTML=user.login
+                document.getElementById("name").innerHTML=user.name
+                document.getElementById("repos").innerHTML=user.public_repos
+                document.getElementById("avatar").src=user.avatar_url
+            }   
+        ).catch((error)=>{
+            console.error(error)
+        })
+    }
+</script>
+<script src="fetch-api.js"></script>
+</html>
+
+</script>
+</html>

@@ -1,0 +1,42 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+#main{
+    margin:0px 40px;
+}
+
+#para1{
+    text-align: center;
+    background-color: black;
+    color:white;
+    margin:40px 0px;
+    padding:25px;
+    font-size: 1.5em;
+    line-height: 40px;
+    border-radius: 20px;
+}
+#btn{
+    border:0px;
+    outline:0px;
+    background-color: rgb(47,79,79);
+    padding:10px;
+    color:white;
+    cursor:pointer;
+    border-radius: 5px;
+}
+
+.darkMode{
+    background-color: black;
+}
+
+.darkMode  #para1{
+    background-color: white;
+    color:black;
+}
+.darkMode #btn{
+    background-color: #dcdcdc;
+    color:black;
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+        <h1>Password Validator</h1>
+        <hr>
+        <h2>Enter Password</h2>
+        <input id="password" type="password" placeholder="Enter password...">
+        <button onclick="validatePassword()">Validate Password</button>
+        <p id="valid"></p>
+        <p id="invalid"></p>
+        <h4>Instructions:</h4>
+        <ul>
+      
+          <li>Password must contain at least one uppercase letter.</li>
+          <li>Password must contain at least one lowercase letter.</li>
+          <li>Password must contain at least one digit.</li>
+          <li>Password must contain at least one symbol.</li>
+          <li>Password minimum length should be 8.</li>
+          <li>Password maximum length should be 50.</li>
+      
+        </ul>
+      
+        <script>
+            function validatePassword() {
+            var password = document.getElementById("password").value;
+            var validParagraph = document.getElementById("valid");
+            var invalidParagraph = document.getElementById("invalid");
+            validParagraph.textContent = "";
+            invalidParagraph.textContent = "";
+            if (password.trim() === "") {
+            invalidParagraph.textContent = "Please enter a password.";
+            } else if (password.length < 8 || password.length > 50) {
+            invalidParagraph.textContent = "Password length must be between 8 and 50.";
+            } else if (!/[A-Z]/.test(password)) {
+            invalidParagraph.textContent = "Password must contain at least one uppercase letter.";
+            } else if (!/[a-z]/.test(password)) {
+            invalidParagraph.textContent = "Password must contain at least one lowercase letter.";
+            } else if (!/\d/.test(password)) {
+            invalidParagraph.textContent = "Password must contain at least one digit.";
+            } else if (!/[!@#$%^&*(),.?":{}|<>]/.test(password)) {   
+              invalidParagraph.textContent = "Password must contain at least one symbol.";     
+            }      
+          }
+          </script>
+</body>
+</html>

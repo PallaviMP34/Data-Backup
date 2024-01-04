@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Document</title>
+</head>
+<body>
+   <p> <input type="text" name="name" id="name" placeholder="Enter the name"/><br> </p>
+    <button onclick="addname()">Add</button>
+
+<p>USER LIST</p>
+<hr>
+
+<p id="output-value"></p>
+<ul></ul>
+</body>
+<script>
+  
+   str='';
+   const addname=function()
+{
+   let n1=document.getElementById("name").value;
+   str+=`<li>${n1}</li>`;
+    document.getElementById("output-value").innerHTML=str;
+}
+</script>
+
+</html>

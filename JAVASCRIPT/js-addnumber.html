@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="num1" id="num1" placeholder="Enter the 1st number"/>
+    <input type="text" name="num2" id="num2" placeholder="Enter the 2nd number"/>
+    <p id="output-value">
+    
+    </p>
+    <button onclick="readName()">Add</button>
+</body>
+
+<script>
+    // let name=prompt("Input your name");
+    // document.write(`<h1>Hello ${name}</h1>`);
+    const readName=function()
+    {
+        let n1=parseInt(document.getElementById("num1").value);
+        let n2=parseInt( document.getElementById("num2").value);
+
+        const add=(x,y)=>x+y;
+        let sum=add(n1,n2);
+        document.write(`<h1>Sum = ${sum}</h1>`)
+    }
+</script>
+
+</html>
